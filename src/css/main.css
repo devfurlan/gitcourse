@@ -5,23 +5,27 @@
 .header-nav {
   background-color: #84b8af; }
   .js .header-nav {
-    height: 56px;
-    overflow: hidden; }
+    height: 56px; }
   .header-nav__logo {
     display: inline-block;
     max-width: 350px;
     height: 56px;
     position: relative;
-    top: 10px; }
+    top: 10px;
+    z-index: 2; }
+  .header-nav img {
+    height: 56px; }
   .header-nav__hamburgger {
     display: none; }
     .js .header-nav__hamburgger {
       display: inline-block;
       float: right;
-      height: 100%;
+      height: 56px;
       border: none;
       background: transparent;
-      color: #fff; }
+      color: #fff;
+      font-size: 1.7em;
+      padding: 0 .5em; }
     .header-nav__hamburgger:hover, .header-nav__hamburgger:focus {
       background: #74aea5; }
   .header-nav__menu {
@@ -34,5 +38,9 @@
       font-size: 1.5em;
       border-top: 1px solid #45776f;
       padding: 1em; }
-    .header-nav__menu:hover {
-      background: #5a9b90; }
+      .header-nav__menu a:hover {
+        background: #5a9b90; }
+    .js .header-nav__menu {
+      display: none; }
+    .menu-opened .header-nav__menu {
+      display: block; }

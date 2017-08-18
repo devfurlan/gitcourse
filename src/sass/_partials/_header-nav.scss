@@ -4,7 +4,6 @@
 
   .js &{
     height: $h;
-    overflow: hidden;
   }
 
   &__logo{
@@ -13,6 +12,11 @@
     height: $h;
     position: relative;
     top: 10px;
+    z-index: 2;
+  }
+
+  img{
+    height: $h;
   }
 
   &__hamburgger{
@@ -21,10 +25,12 @@
     .js &{
       display: inline-block;
       float: right;
-      height: 100%;
+      height: $h;
       border: none;
       background: transparent;
       color: #fff;
+      font-size: 1.7em;
+      padding: 0 .5em;
     }
 
     &:hover, &:focus{
@@ -43,11 +49,20 @@
       font-size: 1.5em;
       border-top: 1px solid darken($main-color, 15%);
       padding: 1em;
+
+      &:hover{
+        background: darken($main-color, 4%);
+      }
     }
 
-    &:hover{
-      background: darken($main-color, 4%);
+    .js &{
+      display: none;
     }
+
+    .menu-opened &{
+      display: block;
+    }
+
   }
 
 
