@@ -4,5 +4,35 @@
 
 .header-nav {
   background-color: #84b8af; }
+  .js .header-nav {
+    height: 56px;
+    overflow: hidden; }
   .header-nav__logo {
-    display: inline-block; }
+    display: inline-block;
+    max-width: 350px;
+    height: 56px;
+    position: relative;
+    top: 10px; }
+  .header-nav__hamburgger {
+    display: none; }
+    .js .header-nav__hamburgger {
+      display: inline-block;
+      float: right;
+      height: 100%;
+      border: none;
+      background: transparent;
+      color: #fff; }
+    .header-nav__hamburgger:hover, .header-nav__hamburgger:focus {
+      background: #74aea5; }
+  .header-nav__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .header-nav__menu a {
+      color: #fff;
+      display: block;
+      font-size: 1.5em;
+      border-top: 1px solid #45776f;
+      padding: 1em; }
+    .header-nav__menu:hover {
+      background: #5a9b90; }
