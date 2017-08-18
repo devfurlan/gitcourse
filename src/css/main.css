@@ -4,3 +4,5 @@
 
 .header-nav {
   background-color: #84b8af; }
+  .header-nav__logo {
+    display: inline-block; }
