@@ -1,0 +1,7 @@
+- Monitorar alterações do scss
+$ npm run gulp listen
+
+
+
+
+

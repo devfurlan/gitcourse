@@ -1,5 +1,87 @@
 .header-animado{
-    $h: 300px;
-    background-color: $main-color;
-    height: $h;
+  $h: 300px;
+  $largura_cenario: 2400px;
+
+  background-color: $main-color;
+  padding-top: 96px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  .header-animado__title{
+    font-size: 38px;
+    font-weight: bold;
+    color: #00151a;
+  }
+  .header-animado__subtitle{
+    font-size: 34px;
+    font-weight: 300;
+    color: white;
+    line-height: 1.5;
+  }
+
+  &__ilustra{
+    height: $h / 2;
+    background-image: url(../img/cenario_all_960.png);
+    background-size: auto 100%;
+    background-position: center top;
+
+    &>div{
+      display: none;
+    }
+
+    @mixin anima($imagem, $valor: '30s linear infinite') {
+      background-image: url(../img/cenario_#{$imagem}.png);
+      animation: anima_cenario #{$valor};
+    }
+
+    @keyframes anima_cenario{
+      from{
+        transform: translateX(0) translateZ(0);
+      }
+      to{
+        transform: translateX(-50%) translateZ(0);
+      }
+    }
+
+    @media screen and (min-width: 480px){
+      background-image: url(../img/cenario_all_1530.png);
+    }
+    @media screen and (min-width: 960px){
+      height: $h;
+      background-image: url(../img/cenario_bg.png);
+      position: relative;
+      
+      &>div{
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $largura_cenario * 2;
+      }
+
+      $items: (
+        nuvens: '90s linear infinite',
+        casas: null,
+        rua: null,
+        carrosCima: '15s linear infinite',
+        carrosBaixo: '15s linear infinite reverse',
+      );
+
+      @each $key, $value in $items{
+        @if $value {
+          .#{$key} {
+            @include anima('#{$key}', $value);
+          }
+        } @else {
+          .#{$key} {
+            @include anima(#{$key});
+          }
+        }
+      }
+
+    }
+
+  }
+
 }
