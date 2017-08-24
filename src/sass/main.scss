@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+body{ font-family: 'Roboto', sans-serif; }
 @import '_variables';
 @import '_partials/_header-animado';
 @import '_partials/_header-nav';
 @import '_partials/_card-portfolio';
+@import '_partials/_footer';
