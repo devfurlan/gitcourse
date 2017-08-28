@@ -61,32 +61,50 @@ body {
           background-image: url(../img/cenario_carrosBaixo.png);
           animation: anima_cenario 15s linear infinite reverse; } }
 
+.js.menu-opened {
+  overflow: hidden; }
+  .js.menu-opened:after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); }
+
 .header-nav {
   background-color: #84b8af; }
   .js .header-nav {
     height: 56px; }
+    .js .header-nav .container {
+      height: 100%; }
   .header-nav__logo {
     display: inline-block;
     max-width: 350px;
     height: 56px;
     position: relative;
     top: 10px;
-    z-index: 2; }
-  .header-nav img {
-    height: 56px; }
+    z-index: 30; }
+    .header-nav__logo img {
+      max-width: 100%;
+      height: 100%; }
   .header-nav__hamburgger {
     display: none; }
     .js .header-nav__hamburgger {
       display: inline-block;
       float: right;
-      height: 56px;
+      height: 100%;
       border: none;
       background: transparent;
       color: #fff;
       font-size: 1.7em;
-      padding: 0 .5em; }
-    .header-nav__hamburgger:hover, .header-nav__hamburgger:focus {
-      background: #74aea5; }
+      padding: 0 0.5em; }
+      .js .header-nav__hamburgger:hover, .js .header-nav__hamburgger:focus {
+        background: #74aea5; }
+      @media screen and (min-width: 680px) {
+        .js .header-nav__hamburgger {
+          display: none; } }
   .header-nav__menu {
     list-style: none;
     margin: 0;
@@ -99,10 +117,30 @@ body {
       padding: 1em; }
       .header-nav__menu a:hover {
         background: #5a9b90; }
-    .js .header-nav__menu {
-      display: none; }
+    @media screen and (max-width: 680px) {
+      .js .header-nav__menu {
+        /* mobile - ajuste menu */
+        width: 80%;
+        top: 56px;
+        position: fixed;
+        left: -100%;
+        bottom: 0;
+        background: #4f877e;
+        transition: left .3s ease-out;
+        z-index: 10; } }
     .menu-opened .header-nav__menu {
       display: block; }
+      @media screen and (max-width: 680px) {
+        .menu-opened .header-nav__menu {
+          left: 0; } }
+    @media screen and (min-width: 680px) {
+      .header-nav__menu {
+        /* desktop - ajuste menu */
+        display: inline-block;
+        float: right;
+        height: 56px; }
+        .header-nav__menu li {
+          display: inline-block; } }
 
 .card-portfolio {
   padding: 0;
