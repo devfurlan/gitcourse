@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Projeto Curso Programador Moderno</title>
+    <link rel="stylesheet" href="components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+    @@include('./inc/nav.html')
+
+    <div class="jumbotron header-animado">
+      <div class="container">
+        <p class="header-animado__title">O que ando fazendo</p>
+        <h1 class="header-animado__subtitle">Veja alguns dos meus trabalhos</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Últimos Trabalhos</h2>
+        </div>
+
+        @@loop('./inc/card-portfolio.html', [
+          {
+            "titulo": "Titulo alterado",
+            "texto": "Texto um",
+            "link": "#",
+            "imagem": "img/portfolio/01.jpg"
+          },
+          {
+            "titulo": "Titulo 2",
+            "texto": "Texto dois",
+            "link": "#",
+            "imagem": "img/portfolio/02.jpg"
+          },
+          {
+            "titulo": "Titulo alterado",
+            "texto": "Texto um",
+            "link": "#",
+            "imagem": "img/portfolio/03.jpg"
+          },
+          {
+            "titulo": "Titulo 2",
+            "texto": "Texto dois",
+            "link": "#",
+            "imagem": "img/portfolio/04.jpg"
+          },
+          {
+            "titulo": "Titulo alterado",
+            "texto": "Texto um",
+            "link": "#",
+            "imagem": "img/portfolio/05.jpg"
+          },
+          {
+            "titulo": "Titulo 2",
+            "texto": "Texto dois",
+            "link": "#",
+            "imagem": "img/portfolio/06.jpg"
+          },
+          {
+            "titulo": "Terceiro titulo",
+            "texto": "Texto três",
+            "link": "#",
+            "imagem": "img/portfolio/07.jpg"
+          }
+        ])
+
+      </div><!-- row -->
+      <hr>
+    </div><!-- container -->
+
+    @@include('./inc/footer.html')
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+
+  </body>
+</html>

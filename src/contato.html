@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Projeto Curso Programador Moderno</title>
+    <link rel="stylesheet" href="components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+    @@include('./inc/nav.html')
+
+    <div class="jumbotron header-animado">
+      <div class="container">
+        <p class="header-animado__title">E aí, Bro?!</p>
+        <h1 class="header-animado__subtitle">Preencha o formulário aí que logo te respondo</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="textNome">Nome</label>
+              <input type="text" class="form-control" id="textNome" placeholder="Nome">
+            </div>
+            <div class="form-group">
+              <label for="textEmail">E-mail</label>
+              <input type="email" class="form-control" id="textEmail" placeholder="E-mail">
+            </div>
+            <div class="form-group">
+              <label for="textMensagem">Mensagem</label>
+              <textarea class="form-control" rows="3" id="textMensagem" placeholder="Mensagem"></textarea>
+            </div>
+            <button type="submit" class="btn btn-lg btn-default">Enviar</button>
+          </form>
+
+        </div>
+      </div><!-- row -->
+      <hr>
+    </div><!-- container -->
+
+    @@include('./inc/footer.html')
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+
+  </body>
+</html>
