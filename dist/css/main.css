@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400");
-body {
-  font-family: 'Roboto', sans-serif; }
+body, .header-animado .header-animado__title, .header-animado .header-animado__subtitle {
+  font-family: 'Roboto', Arial, sans-serif; }
 
 .header-animado {
   background-color: #64a59a;
   padding-top: 96px;
-  margin-bottom: 0;
+  margin-bottom: 2em;
   padding-bottom: 0; }
   .header-animado .header-animado__title {
     font-size: 38px;
@@ -15,7 +15,8 @@ body {
     font-size: 34px;
     font-weight: 300;
     color: white;
-    line-height: 1.5; }
+    line-height: 1.5;
+    margin-bottom: 2em; }
   .header-animado__ilustra {
     height: 150px;
     background-image: url(../img/cenario_all_960.png);

@@ -4,19 +4,22 @@
 
   background-color: $main-color;
   padding-top: 96px;
-  margin-bottom: 0;
+  margin-bottom: 2em;
   padding-bottom: 0;
 
   .header-animado__title{
+    @extend %FontFamily_default;
     font-size: 38px;
     font-weight: bold;
     color: #00151a;
   }
   .header-animado__subtitle{
+    @extend %FontFamily_default;
     font-size: 34px;
     font-weight: 300;
     color: white;
     line-height: 1.5;
+    margin-bottom: 2em;
   }
 
   &__ilustra{

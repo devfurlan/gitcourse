@@ -1,2 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
-body{ font-family: 'Roboto', sans-serif; }
+body{
+  @extend %FontFamily_default;
+}
