@@ -33,44 +33,26 @@
           <h1>Últimos Trabalhos</h1>
         </div>
 
-        <div class="col-xs-12 col-xs-6 col-sm-4">
-          <h3 class="card-portfolio__title">titulo do trabalho</h3>
-          <div class="thumbnail card-portfolio">
-            <div class="card-portfolio__imagem">
-              <img src="img/portfolio/01.jpg" alt="Portfolio 1">
-            </div>
-            <div class="caption card-portfolio__caption">
-              <p class="card-portfolio__text">pequeno texto</p>
-            </div>
-            <a href="#" class="card-portfolio__btn btn btn-primary" role="button">ver mais</a>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-xs-6 col-sm-4">
-          <h3 class="card-portfolio__title">titulo do trabalho</h3>
-          <div class="thumbnail card-portfolio">
-            <div class="card-portfolio__imagem">
-              <img src="img/portfolio/02.jpg" alt="Portfolio 2">
-            </div>
-            <div class="caption card-portfolio__caption">
-              <p class="card-portfolio__text">pequeno texto</p>
-            </div>
-            <a href="#" class="card-portfolio__btn btn btn-primary" role="button">ver mais</a>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-xs-6 col-sm-4">
-          <h3 class="card-portfolio__title">titulo do trabalho</h3>
-          <div class="thumbnail card-portfolio">
-            <div class="card-portfolio__imagem">
-              <img src="img/portfolio/03.jpg" alt="Portfolio 3">
-            </div>
-            <div class="caption card-portfolio__caption">
-              <p class="card-portfolio__text">pequeno texto</p>
-            </div>
-            <a href="#" class="card-portfolio__btn btn btn-primary" role="button">ver mais</a>
-          </div>
-        </div>
+        @@loop('./inc/card-portfolio.html', [
+          {
+            "titulo": "Titulo alterado",
+            "texto": "Texto um",
+            "link": "#",
+            "imagem": "img/portfolio/01.jpg"
+          },
+          {
+            "titulo": "Titulo 2",
+            "texto": "Texto dois",
+            "link": "#",
+            "imagem": "img/portfolio/02.jpg"
+          },
+          {
+            "titulo": "Terceiro titulo",
+            "texto": "Texto três",
+            "link": "#",
+            "imagem": "img/portfolio/03.jpg"
+          }
+        ])
 
       </div><!-- row -->
       <hr>
