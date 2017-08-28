@@ -10,7 +10,25 @@
   </head>
   <body>
 
-    @@include('./inc/nav.html')
+    <nav class="header-nav">
+  <div class="container">
+    <a href="index.html" class="header-nav__logo">
+      <img src="img/logo.svg" alt="Logo Silvia">
+    </a>
+    <button class="header-nav__hamburgger" type="button" aria-controls="mainMenu" aria-expanded="false">
+      <div class="header-nav__hamburggerParties">
+        <span class="sr-only">Menu</span>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+    </button>
+    <ul class="header-nav__menu" id="mainMenu" aria-expanded="false">
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="sobre.html">Sobre mim</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </div>
+</nav>
+
 
     <div class="jumbotron header-animado">
       <div class="container">
@@ -76,7 +94,19 @@
       <hr>
     </div><!-- container -->
 
-    @@include('./inc/footer.html')
+    <footer class="footer">
+  <div class="container">
+    <p class="text-right">Social:</p>
+    <ul class="list-inline pull-right">
+      <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a></li>
+      <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a></li>
+      <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a></li>
+      <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a></li>
+      <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribble"></i></a></li>
+    </ul>
+  </div>
+</footer>
+
 
     <script src="js/main.js"></script>
     <script src="js/menu.js"></script>
