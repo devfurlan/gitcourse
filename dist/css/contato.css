@@ -1,0 +1,10 @@
+input[type="text"],
+input[type="email"], textarea.form-control {
+  margin-bottom: 15px;
+  transition: all .3s linear; }
+  input[type="text"]:focus,
+  input[type="email"]:focus, textarea.form-control:focus {
+    background-color: #ccc; }
+
+textarea.form-control {
+  height: 100px; }
