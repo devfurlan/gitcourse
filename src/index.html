@@ -15,13 +15,13 @@
         <a href="index.html" class="header-nav__logo">
           <img src="img/logo.svg" alt="Logo Silvia">
         </a>
-        <button class="header-nav__hamburgger" type="button">
+        <button class="header-nav__hamburgger" type="button" aria-controls="mainMenu" aria-expanded="false">
           <div class="header-nav__hamburggerParties">
             <span class="sr-only">Menu</span>
             <i class="fa fa-bars" aria-hidden="true"></i>
           </div>
         </button>
-        <ul class="header-nav__menu">
+        <ul class="header-nav__menu" id="mainMenu" aria-expanded="false">
           <li><a href="#">Portfolio</a></li>
           <li><a href="#">Sobre mim</a></li>
           <li><a href="#">Contato</a></li>

@@ -106,9 +106,18 @@
 
       li{
         display: inline-block;
+
+        a{
+          border-top: 0;
+          padding: 15px;
+          transition: all 0.3s ease-in-out;
+
+          &:hover{
+            background-color: transparent;
+            transform: translateY(.17em);
+          }
+        }
       }
     }
-
   }
-
 }

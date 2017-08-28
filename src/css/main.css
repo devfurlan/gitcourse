@@ -140,7 +140,14 @@ body {
         float: right;
         height: 56px; }
         .header-nav__menu li {
-          display: inline-block; } }
+          display: inline-block; }
+          .header-nav__menu li a {
+            border-top: 0;
+            padding: 15px;
+            transition: all 0.3s ease-in-out; }
+            .header-nav__menu li a:hover {
+              background-color: transparent;
+              transform: translateY(0.17em); } }
 
 .card-portfolio {
   padding: 0;
